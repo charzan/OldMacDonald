@@ -3,11 +3,12 @@ class Chick implements Animal
      //your code here
 	private String myType;
 	private String mySound;
-	public Chick(String type, String sound, String soundB)
+	private String mySoundTwo;
+	public Chick(String type, String sound, String soundTwo)
 	{
 		myType = type;
 		mySound = sound;
-		mySound = soundB;
+		mySoundTwo = soundTwo;
 	}
 	public Chick()
 	{
@@ -15,6 +16,17 @@ class Chick implements Animal
 		mySound = "unknown";
 
 	}
-	public String getSound(){return mySound;}
+	public String getSound()
+	{
+		if(((Math.random()*2 -1)) > 0)
+		{
+			return mySound;
+		}
+		else
+		{
+			return mySoundTwo;
+		}
+		
+	}
 	public String getType(){return myType;}
 }
